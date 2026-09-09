@@ -3,36 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>らむラボ</title>
+
+    <!-- 数式表示ライブラリ (MathJax v3) の導入 -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
     <style>
+        :root {
+            --main-width: 800px;
+            --text-color: #222;
+            --border-color: #ccc;
+        }
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
+            font-family: "Times New Roman", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiRyo, sans-serif;
+            max-width: var(--main-width);
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
+            color: var(--text-color);
         }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
+        header {
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2em;
             padding-bottom: 10px;
         }
-        .section {
-            margin: 20px 0;
+        h1 {
+            margin: 0;
+            color: #111;
+            font-size: 2rem;
+        }
+        section {
+            margin: 2em 0;
+        }
+        h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 4px;
+            font-size: 1.5rem;
+        }
+        dl {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 10px 20px;
+        }
+        dt {
+            font-weight: bold;
+        }
+        dd {
+            margin: 0;
+        }
+        address {
+            font-style: normal;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    
-    <div class="section">
-        <h2>About</h2>
-        <p>こちらにサイトの説明を記載してください。</p>
-    </div>
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>連絡先情報があれば記載してください。</p>
-    </div>
+    <header>
+        <h1>らむラボ</h1>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <dl>
+                <dt>ハンドルネーム</dt>
+                <dd>らむ</dd>
+                <dt>研究分野</dt>
+                <dd>数学(解析学等)や和算をマイペースに研究しています。</dd>
+                <dt>座右の銘1</dt>
+                <dd>Some people collect butterflies, some collect stamps, and some collect inequalities. <br>
+		--Ralph P. Boas (1979), Inequalities for a collection</dd>
+		<dt>座右の銘2</dt>
+		<dd>知之者不如好之者。好之者不如樂之者。<br>
+		--孔子『論語』 雍也第六18</dd>
+            </dl>
+        </section>
+
+        <section id="topics">
+            <h2>Topics</h2>
+
+            <!-- 各トピックを個別に折りたたむ構造 -->
+            <details>
+                <summary>01-解析学の話題 (クリックで開閉)</summary>
+                <div class="details-content">
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                </div>
+            </details>
+
+            <details>
+                <summary>02-その他数学の話題 (クリックで開閉)</summary>
+                <div class="details-content">
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                </div>
+            </details>
+
+            <details>
+                <summary>03-和算の話題 (クリックで開閉)</summary>
+                <div class="details-content">
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                    <dl>
+                	<dt>yyyy年m月d日</dt>
+                	<a href="https://www.google.com/" target="_blank" rel="noopener noreferrer"><dd>$f(x) = x^{p}$プ</dd></a>
+	            </dl>
+                </div>
+            </details>
+        </section>
+
+        <section id="events">
+            <h2>Events</h2>
+            <dl>
+                <dt>2026年9月5日</dt>
+                <dd>令和８年度　山の寺寺院群「龍門寺」災害復旧工事　現地見学会＆匠の技ワークショップ</dd>
+                <dt>2026年3月14日</dt>
+                <dd>【地域学講座】－加能地域史研究会との共同開催－「能登の歴史研究最前線」　第１部「和算と定数について－算額から読み解く－」　</dd>
+                <dt>2025年8月17日</dt>
+                <dd>【地域学講座】和算とソロバン</dd>
+                <dt>2024年7月13日</dt>
+                <dd>【地域学講座】能登の和算❷</dd>
+                <dt>2024年6月15日</dt>
+                <dd>【地域学講座】能登の和算❶</dd>
+                <dt>2024年1月20日</dt>
+                <dd>(中止)【地域学講座】資料から読み解く七尾の歴史❹　～江戸時代の数学 その１～</dd>
+                <dt>2018年2月15日</dt>
+                <dd>修士論文発表会</dd>
+            </dl>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <address>
+                <p>E-mail: lebesgue2020★yahoo.co.jp</p>
+                <p><small>※ 迷惑メール対策のため, 「★」を「@」に置き換えて送信してください。</small></p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>&copy; らむ. All Rights Reserved.</small></p>
+    </footer>
+
 </body>
 </html>
