@@ -98,27 +98,35 @@
     <main>
         <section id="about">
             <h2>About</h2>
-            <dl>
-                <dt>ハンドルネーム</dt>
-                <dd>らむ</dd>
-                <dt>所属</dt>
-                <dd><a href="https://www4.hp-ez.com/hp/kanoutiikishi/" target="_blank" rel="noopener noreferrer">加能地域史研究会</a></dd>
-                <dt>活動</dt>
-                <dd>数学や和算(江戸時代の数学)をマイペースに研究しています。「令和の算額」と称して, 令和の時代に復刻された算額(和算の絵馬)を作成する活動も行っています。</dd>
-                <dt>座右の銘1</dt>
-                <dd>Some people collect butterflies, some collect stamps, and some collect inequalities. <br>
-		【訳】蝶を集める人もいれば, 切手を集める人もいる。そして, 不等式を集める人もいる。<br>
-		--Ralph P. Boas (1979), Inequalities for a collection</dd>
-		<dt>座右の銘2</dt>
-		<dd>知之者不如好之者。好之者不如樂之者。<br>
-		【訳】あることを知っているだけの人は, それを好きな人には及ばない。それを好きな人は, それを心から楽しんでいる人には及ばない。<br>
-		--孔子『論語』 雍也第六・第18章</dd>
-		<dt>思考の糧</dt>
-		<dd>It's of no use whatsoever. This is just an experiment that proves Maestro Maxwell was right we just have these mysterious electromagnetic waves that we cannot see with the naked eye. But they are there. <br>
-		【訳】全く何の役にも立たない。これはマクスウェル先生の理論が正しかったとを証明する実験に過ぎない。我々の目に見えない謎の電磁波が存在するということを示している。しかし, それらは確かに存在している。<br>
-		--『Quips, quotes, and quanta』<br>
-		<small>物理学者ヘルツが世界初の電磁波を発生させた際, 感動した学生たちからその応用可能性を尋ねられた際の言葉である。基礎研究や理論の真価は, 発見者本人にすら予測できないことがある。どれほど抽象的で目先の実用性に乏しく見えようとも, 自らの浅い先入観で数学的探究の価値を軽々に限縮してはならないという自戒として。</small></dd>
-            </dl>
+
+            <!-- 各トピックを個別に折りたたむ構造 -->
+            <details>
+                <summary>(クリックで開閉)</summary>
+                <div class="details-content">
+		<!-- アバウトの概要説明 -->
+            	<dl>
+                	<dt>ハンドルネーム</dt>
+                	<dd>らむ</dd>
+                	<dt>所属</dt>
+                	<dd><a href="https://www4.hp-ez.com/hp/kanoutiikishi/" target="_blank" rel="noopener noreferrer">加能地域史研究会(外部リンク)</a></dd>
+                	<dt>活動</dt>
+                	<dd>数学や和算(江戸時代の数学)をマイペースに研究しています。「令和の算額」と称して, 令和の時代に復刻された算額(和算の絵馬)を作成する活動も行っています。</dd>
+                	<dt>座右の銘1</dt>
+                	<dd>Some people collect butterflies, some collect stamps, and some collect inequalities. <br>
+			【訳】蝶を集める人もいれば, 切手を集める人もいる。そして, 不等式を集める人もいる。<br>
+			--Ralph P. Boas (1979), Inequalities for a collection</dd>
+			<dt>座右の銘2</dt>
+			<dd>知之者不如好之者。好之者不如樂之者。<br>
+			【訳】あることを知っているだけの人は, それを好きな人には及ばない。それを好きな人は, それを心から楽しんでいる人には及ばない。<br>
+			--孔子『論語』 雍也第六・第18章</dd>
+			<dt>思考の糧</dt>
+			<dd>It's of no use whatsoever. This is just an experiment that proves Maestro Maxwell was right we just have these mysterious electromagnetic waves that we cannot see with the naked eye. But they are there. <br>
+			【訳】全く何の役にも立たない。これはマクスウェル先生の理論が正しかったとを証明する実験に過ぎない。我々の目に見えない謎の電磁波が存在するということを示している。しかし, それらは確かに存在している。<br>
+			--『Quips, quotes, and quanta』<br>
+			<small>物理学者ヘルツが世界初の電磁波実験に成功した際, 感銘を受けた学生たちからその応用可能性を尋ねられたときの言葉である。基礎研究や理論の真価は, 発見者本人にすら予測できないことがある。どれほど抽象的で目先の実用性に乏しく見えようとも, 自らの浅い先入観で数学的探究の価値を軽々に限縮してはならないという自戒として。</small></dd>
+            	</dl>
+                </div>
+            </details>
         </section>
 
         <section id="topics">
@@ -292,14 +300,14 @@
 			</ul></dd>
                 	<dt>2020年2月10日</dt>
                 	<dd>高木関数の減少再配列<br>
-			測度空間$(X,\mathscr{F}, \mu)$上の関数$f:X \to \mathbb{R}$に対し, 関数$f^{*}:[0,\infty) \to [0,\infty]$を$f^{*}(t):=\inf \{ \lambda > 0 : \mu(\{x \in X : |f(x)|> \lambda \})\leqq t \}$で定義する。$f^{*}$を$f$の減少再配列と呼びます。区間$[0,1]$に於ける高木関数$T(x):=\displaystyle \sum_{n=0}^{\infty} \dfrac{\min \{|2^{n}x-k|\in \mathbb{R} : k \in \mathbb{Z}\} }{2^{n}}$について, その減少再配列$T^{*}$はどんな表現ができてどんな性質(病的性質など)があるのかが疑問点です。
+			測度空間$(X,\mathscr{F}, \mu)$上の$\mathscr{F}$-可測関数$f:X \to \mathbb{R}$に対し, 関数$f^{*}:[0,\infty) \to [0,\infty]$を$f^{*}(t):=\inf \{ \lambda > 0 : \mu(\{x \in X : |f(x)|> \lambda \})\leqslant t \}$で定義する。$f^{*}$を$f$の減少再配列と呼びます。区間$[0,1]$に於ける高木関数$T(x):=\displaystyle \sum_{n=0}^{\infty} \dfrac{\min \{|2^{n}x-k|\in \mathbb{R} : k \in \mathbb{Z}\} }{2^{n}}$について, その減少再配列$T^{*}$はどんな表現ができてどんな性質(病的性質など)があるのかが疑問点です。
 			</dd>
                 	<dt>2015年4月15日</dt>
                 	<dd><a href="./topic05/20150415_mean.png" target="_blank" rel="noopener noreferrer">平均の公理化</a><br>
 			上リンクのような平均の公理化(平均っぽい)を考察していました。
 次の$2$つが疑問点です。
 			<ul>
-				<li>対称関数$M':(0,\infty)^{2}\to (0,\infty)$が恒等性$M'(x,x)=x$を充たすならば, 平均っぽい関数が存在して$M(x,y)=M'(x,y)$か??
+				<li>対称関数$M':(0,\infty)^{2}\to (0,\infty)$が恒等性$M'(x,x)=x$を充たすならば, 或る平均っぽい関数$M$が存在して$M(x,y)=M'(x,y)$か??
 				<li>既存の概念で, もっと適切な平均の公理化があるのではないか??
 			</ul>
 			</dd>
